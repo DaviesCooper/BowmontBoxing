@@ -1,3 +1,5 @@
+import './Schedule.css';
+
 const rows: { day: string; detail: string }[] = [
   { day: 'Monday', detail: 'Youth fundamentals — 5:00–6:15 p.m. · Adult technique — 6:30–8:00 p.m.' },
   { day: 'Tuesday', detail: 'Open gym · 12:00–2:00 p.m. · Bag rounds — 5:45–7:30 p.m.' },

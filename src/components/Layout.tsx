@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
-import { BottomBanner } from './BottomBanner';
+import '../styles/sections.css';
+import './Layout.css';
 import { Footer } from './Footer';
 import { Header } from './Header';
 import { ScrollToTop } from './ScrollToTop';
@@ -16,9 +17,8 @@ export function Layout() {
         <main id="main-content">
           <Outlet />
         </main>
-        <BottomBanner />
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }

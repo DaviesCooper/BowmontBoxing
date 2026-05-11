@@ -1,0 +1,51 @@
+.card.coach-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+}
+
+.coach-card__photo-wrap {
+  aspect-ratio: 4 / 5;
+  background: #ebe4dc;
+}
+
+.coach-card__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.coach-card__body {
+  padding: 1.25rem 1.35rem 1.35rem;
+}
+
+.coach-card__name {
+  margin-bottom: 0.35rem;
+}
+
+.coach-role {
+  margin: 0 0 0.65rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+}
+
+.card-grid--coaches {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .card-grid--coaches {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 960px) {
+  .card-grid--coaches {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

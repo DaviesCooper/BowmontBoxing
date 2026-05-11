@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import './Header.css';
 
 const navClass = ({ isActive }: { isActive: boolean }) =>
   isActive ? 'nav-link is-active' : 'nav-link';
@@ -14,7 +15,7 @@ export function Header() {
 
   return (
     <header className="site-header">
-      <div className="site-header__banner">
+      <div className="site-header__bar">
         <NavLink className="site-header__logo-link" to="/" end>
           <img
             className="site-header__logo"
@@ -26,18 +27,18 @@ export function Header() {
             fetchPriority="high"
           />
         </NavLink>
+        <nav className="site-header__nav" aria-label="Primary">
+          <ul className="nav-links">
+            {links.map((item) => (
+              <li key={item.to}>
+                <NavLink to={item.to} className={navClass}>
+                  {item.label}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
-      <nav className="site-header__nav" aria-label="Primary">
-        <ul className="nav-links">
-          {links.map((item) => (
-            <li key={item.to}>
-              <NavLink to={item.to} className={navClass}>
-                {item.label}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
-      </nav>
     </header>
   );
 }

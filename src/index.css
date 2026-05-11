@@ -1,5 +1,5 @@
 :root {
-  color-scheme: dark;
+  color-scheme: light;
   --ink: #0d0606;
   --paper: #f4ede4;
   --cream: #e8dfd2;
@@ -7,15 +7,15 @@
   --rust-deep: #5c1414;
   --gold: #ffa500;
   --gold-dim: #cc8400;
-  --muted: rgba(244, 237, 228, 0.72);
+  --muted: rgba(13, 6, 6, 0.66);
   --font-display: 'Bebas Neue', sans-serif;
   --font-body: 'Newsreader', Georgia, serif;
   --stripe: repeating-linear-gradient(
     135deg,
     transparent 0,
     transparent 6px,
-    rgba(255, 165, 0, 0.07) 6px,
-    rgba(255, 165, 0, 0.07) 7px
+    rgba(255, 165, 0, 0.1) 6px,
+    rgba(255, 165, 0, 0.1) 7px
   );
 }
 
@@ -27,21 +27,24 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
+  min-height: 100dvh;
   font-family: var(--font-body);
   font-size: 1.125rem;
   line-height: 1.65;
-  color: var(--paper);
-  background-color: var(--ink);
-  background-image: var(--stripe), radial-gradient(ellipse 120% 80% at 50% -20%, #2a1515 0%, var(--ink) 55%);
+  color: var(--ink);
+  background-color: var(--cream);
+  background-image: var(--stripe), radial-gradient(ellipse 120% 80% at 50% -20%, #faf6f0 0%, var(--cream) 55%);
 }
 
 #root {
   min-height: 100vh;
+  min-height: 100dvh;
 }
 
 a {
@@ -51,8 +54,8 @@ a {
 }
 
 a:hover {
-  color: var(--paper);
-  text-decoration-color: var(--paper);
+  color: var(--rust-deep);
+  text-decoration-color: rgba(92, 20, 20, 0.45);
 }
 
 .skip-link {

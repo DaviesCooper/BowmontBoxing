@@ -1,0 +1,32 @@
+.section {
+  padding: clamp(3.25rem, 8vw, 5rem) 0;
+  border-bottom: 1px solid rgba(201, 162, 39, 0.15);
+}
+
+.section:last-of-type {
+  border-bottom: none;
+}
+
+.section__heading {
+  margin: 0 0 0.25rem;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: 0.06em;
+  color: var(--ink);
+}
+
+.section__lead {
+  margin: 0 0 2rem;
+  max-width: 52ch;
+  color: var(--muted);
+}
+
+.page-intro {
+  padding: clamp(2rem, 6vw, 3.25rem) 0 clamp(1.25rem, 3vw, 1.75rem);
+  border-bottom: 1px solid rgba(201, 162, 39, 0.15);
+}
+
+.page-intro .section__lead {
+  margin-bottom: 0;
+}

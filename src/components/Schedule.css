@@ -1,0 +1,30 @@
+.schedule {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.schedule-row {
+  display: grid;
+  grid-template-columns: minmax(0, 140px) 1fr;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(13, 6, 6, 0.1);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+@media (max-width: 520px) {
+  .schedule-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.schedule-day {
+  font-family: var(--font-display);
+  letter-spacing: 0.14em;
+  color: var(--gold);
+}
+
+.schedule-times {
+  margin: 0;
+  color: var(--muted);
+}

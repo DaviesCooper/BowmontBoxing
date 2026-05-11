@@ -1,4 +1,6 @@
+import '../components/CardGrid.css';
 import { COACHES } from '../data/coaches';
+import './CoachesPage.css';
 
 export function CoachesPage() {
   return (

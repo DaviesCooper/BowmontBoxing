@@ -1,3 +1,5 @@
+import './CardGrid.css';
+
 const programs = [
   {
     title: 'Fundamentals',

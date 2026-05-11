@@ -1,3 +1,5 @@
+import './Visit.css';
+
 export function Visit() {
   return (
     <section id="visit" className="section" aria-labelledby="visit-heading">
