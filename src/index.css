@@ -1,0 +1,72 @@
+:root {
+  color-scheme: dark;
+  --ink: #0d0606;
+  --paper: #f4ede4;
+  --cream: #e8dfd2;
+  --rust: #8b1e1e;
+  --rust-deep: #5c1414;
+  --gold: #ffa500;
+  --gold-dim: #cc8400;
+  --muted: rgba(244, 237, 228, 0.72);
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Newsreader', Georgia, serif;
+  --stripe: repeating-linear-gradient(
+    135deg,
+    transparent 0,
+    transparent 6px,
+    rgba(255, 165, 0, 0.07) 6px,
+    rgba(255, 165, 0, 0.07) 7px
+  );
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--paper);
+  background-color: var(--ink);
+  background-image: var(--stripe), radial-gradient(ellipse 120% 80% at 50% -20%, #2a1515 0%, var(--ink) 55%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: var(--gold);
+  text-decoration-color: rgba(201, 162, 39, 0.45);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--paper);
+  text-decoration-color: var(--paper);
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0.75rem;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background: var(--gold);
+  color: var(--ink);
+  font-family: var(--font-display);
+  letter-spacing: 0.06em;
+}
+
+.skip-link:focus {
+  left: 0.75rem;
+}
