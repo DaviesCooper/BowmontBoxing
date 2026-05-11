@@ -1,3 +1,7 @@
+.coaches-page__hero-title {
+  text-transform: uppercase;
+}
+
 .card.coach-card {
   display: flex;
   flex-direction: column;
@@ -6,8 +10,51 @@
 }
 
 .coach-card__photo-wrap {
-  aspect-ratio: 4 / 5;
+  /* Fixed height so photos match even when a row has fewer columns (narrower cards). */
+  height: clamp(14rem, 42vw, 21rem);
+  flex-shrink: 0;
+  overflow: hidden;
   background: #ebe4dc;
+}
+
+button.coach-card__photo-wrap--tap {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  margin: 0;
+  font: inherit;
+  text-align: inherit;
+  cursor: pointer;
+  appearance: none;
+  background: #ebe4dc;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.coach-photo-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: max(0.75rem, env(safe-area-inset-top)) max(0.75rem, env(safe-area-inset-right))
+    max(0.75rem, env(safe-area-inset-bottom)) max(0.75rem, env(safe-area-inset-left));
+  background: rgba(10, 6, 6, 0.94);
+  cursor: zoom-out;
+}
+
+.coach-photo-lightbox__img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  object-position: center center;
+  display: block;
+  pointer-events: auto;
 }
 
 .coach-card__photo {
@@ -47,5 +94,10 @@
 @media (min-width: 960px) {
   .card-grid--coaches {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* When the last row has a single tile (count ≡ 1 mod 3), place it in the center column. */
+  .card-grid--coaches > .coach-card:last-child:nth-child(3n + 1) {
+    grid-column: 2;
   }
 }

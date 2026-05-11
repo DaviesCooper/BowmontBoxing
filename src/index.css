@@ -28,6 +28,8 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  /* Avoid layout jump when vertical scrollbar appears/disappears between routes */
+  scrollbar-gutter: stable;
 }
 
 body {

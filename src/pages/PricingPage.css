@@ -1,3 +1,7 @@
+.pricing-page__body .pricing-grid {
+  margin-top: 1.75rem;
+}
+
 .pricing-grid {
   display: grid;
   gap: 1rem;

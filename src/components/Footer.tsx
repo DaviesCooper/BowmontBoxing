@@ -53,8 +53,13 @@ export function Footer() {
           href={mindbodyJoin}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Join on Mindbody"
         >
-          Join Today
+          <img
+            src="/logo/mb-logo.svg"
+            alt="Mindbody"
+            className="site-footer__join-logo"
+          />
         </a>
         <p className="site-footer__meta">
           © {year} Bowmont Boxing Club · Seconds out.

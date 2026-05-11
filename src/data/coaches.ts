@@ -3,68 +3,71 @@ export type Coach = {
   image: string;
   role: string;
   bio: string;
+  /** Overrides `object-position` for this coach’s crop (e.g. `center 72%` weights focus toward the lower part of the photo). */
+  photoObjectPosition?: string;
 };
 
-/** Coach photos live in `public/coaches/`. Edit roles and bios anytime. */
+/** Coach photos live in `public/coaches/`. File names use first names. */
 export const COACHES: Coach[] = [
   {
-    name: 'Doug',
-    image: '/coaches/Doug.png',
-    role: 'Coach',
-    bio: 'On the floor with you for fundamentals, bag work, and the details that keep hands up late in the round.',
-  },
-  {
-    name: 'Fidel',
-    image: '/coaches/Fidel.png',
-    role: 'Coach',
-    bio: 'Pad rounds and conditioning with a steady eye on form—beginners and regulars welcome.',
-  },
-  {
-    name: 'Greg',
-    image: '/coaches/Greg.png',
-    role: 'Coach',
-    bio: 'Helps boxers build rhythm on the bags and confidence in the corner.',
-  },
-  {
-    name: 'Gwyn',
+    name: 'Gwyn Lewis',
     image: '/coaches/Gwyn.png',
-    role: 'Coach',
-    bio: 'Focused coaching in a room that rewards showing up and putting in honest work.',
+    role: 'Head coach · Level 2 coach',
+    bio: 'Gwyn is the head coach. He runs the Fighter Fitness classes and competition classes.',
   },
   {
-    name: 'Jeff',
-    image: '/coaches/Jeff.png',
-    role: 'Coach',
-    bio: 'Technical pointers, mitt work, and the kind of feedback you can use the same night.',
-  },
-  {
-    name: 'Kendra',
-    image: '/coaches/Kendra.png',
-    role: 'Coach',
-    bio: 'Youth and adult classes—clear instruction, respect for the sport, and a sharp timer.',
-  },
-  {
-    name: 'Mike',
-    image: '/coaches/Mike.png',
-    role: 'Coach',
-    bio: 'Old-school rounds: footwork first, power when you have earned the balance.',
-  },
-  {
-    name: 'Neal',
-    image: '/coaches/Neal.png',
-    role: 'Coach',
-    bio: 'Keeps the room organized, safe, and moving so everyone gets their work in.',
-  },
-  {
-    name: 'Todd',
+    name: 'Todd Hill',
     image: '/coaches/Todd.png',
-    role: 'Coach',
-    bio: 'From first wraps to late sparring prep—meets you where you are and pushes the standard.',
+    role: 'Level 2 coach',
+    bio: '',
   },
   {
-    name: 'Ty',
+    name: 'Jeff Lecuyer',
+    image: '/coaches/Jeff.png',
+    role: 'Level 1 coach',
+    bio: '',
+  },
+  {
+    name: 'Greg Shymanski',
+    image: '/coaches/Greg.png',
+    role: 'Level 1 coach',
+    bio: '',
+  },
+  {
+    name: 'Ty Pachenko',
     image: '/coaches/Ty.png',
-    role: 'Coach',
-    bio: 'Bag work, drills, and the small corrections that turn a swing into a punch.',
+    role: 'Level 1 coach',
+    bio: '',
+    photoObjectPosition: 'center 30%',
+  },
+  {
+    name: 'Fidel Heho',
+    image: '/coaches/Fidel.png',
+    role: 'Active fighter / coach',
+    bio: '',
+  },
+  {
+    name: 'Neal Greaney',
+    image: '/coaches/Neal.png',
+    role: 'Level 2 coach',
+    bio: '',
+  },
+  {
+    name: 'Doug Harder',
+    image: '/coaches/Doug.png',
+    role: 'Legacy coach · Level 4 coach',
+    bio: '',
+  },
+  {
+    name: 'Mike Short',
+    image: '/coaches/Mike.png',
+    role: 'Legacy coach · Level 3 coach',
+    bio: '',
+  },
+  {
+    name: 'Kendra Mogck',
+    image: '/coaches/Kendra.png',
+    role: 'Legacy coach · Level 2 coach',
+    bio: '',
   },
 ];

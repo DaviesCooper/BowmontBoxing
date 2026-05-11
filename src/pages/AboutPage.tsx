@@ -12,7 +12,7 @@ export function AboutPage() {
           About Bowmont
         </h1>
         <p className="hero__intro about-hero__tagline">
-          A non-profit club in Bowness and Montgomery—here since 1983.
+          A non-profit club in Bowness and Montgomery since 1983.
         </p>
       </section>
       <div className="about-page__body">
@@ -24,7 +24,8 @@ export function AboutPage() {
         </p>
         <p>
           All coaches at Bowmont Boxing are volunteers, ensuring the engagement and passion of our
-          coaches is passed on to all members. Bowmont Boxing focuses on the basics of boxing,
+          coaches is passed on to all members. The club is not run like a staffed business, so
+          there are no fixed opening hours outside of scheduled classes. Bowmont Boxing focuses on the basics of boxing,
           including footwork and agility, proper technique and an established jab, similar to the
           training of the Cuban national team. We have a slightly unconventional, yet recognizably
           old school method of training, which allows our boxers to achieve success at all levels.

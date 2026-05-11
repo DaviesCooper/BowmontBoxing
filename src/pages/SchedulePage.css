@@ -1,0 +1,129 @@
+/*
+ * Programmatic scroll uses measured header height (scrollBelowSiteHeader).
+ * Small margin for no-JS / native hash jumps only.
+ */
+.card-grid--schedule > .card[id],
+.card-grid--schedule > .card .card__title[id] {
+  scroll-margin-top: 0.75rem;
+}
+
+@media (min-width: 769px) {
+  .card-grid--schedule > .card[id],
+  .card-grid--schedule > .card .card__title[id] {
+    scroll-margin-top: 1rem;
+  }
+}
+
+/* Long intro card: flat fill so a tall gradient does not read as a color shift. */
+.card-grid--schedule > .card.card--solid {
+  background: rgba(252, 249, 244, 0.98);
+  background-image: none;
+}
+
+/* Schedule page: one column of full-width cards (same .card / .card__title as CardGrid). */
+.card-grid--schedule {
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* Standalone requirement between schedule cards */
+.schedule-mandatory-notice {
+  margin: 0;
+  padding: 1.1rem 1.25rem 1.15rem;
+  border: 2px solid var(--gold-dim);
+  border-left-width: 6px;
+  border-left-color: var(--gold);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 165, 0, 0.14),
+    rgba(252, 249, 244, 0.98)
+  );
+  box-shadow: 0 2px 12px rgba(13, 6, 6, 0.08);
+}
+
+.schedule-mandatory-notice__body {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: 0.03em;
+  color: var(--ink);
+}
+
+.schedule-mandatory-notice__label {
+  font-family: var(--font-display);
+  font-size: 0.88em;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+}
+
+.card-grid--schedule .card__title {
+  margin-bottom: 0.35rem;
+}
+
+.class-card__lede {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.class-card__subhead {
+  margin: 1.35rem 0 0.55rem;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.class-card__subhead:first-of-type {
+  margin-top: 0.5rem;
+}
+
+.class-card__list {
+  margin: 0 0 0.85rem;
+  padding-left: 1.25rem;
+  color: var(--ink);
+}
+
+.class-card__list li {
+  margin-bottom: 0.45rem;
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+
+.class-card__list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Same accent as coach roles: short label (must beat .card p below). */
+.card-grid--schedule .card p.class-card__meta {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+}
+
+.card-grid--schedule .card p {
+  margin: 0 0 0.85rem;
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+.card-grid--schedule .card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Time line (must beat .card p above). */
+.card-grid--schedule .card p.class-card__times {
+  margin: 0 0 0.85rem;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}

@@ -185,7 +185,7 @@
 .hero.hero--photo .hero__intro {
   margin: 0 auto 1rem;
   max-width: 36rem;
-  font-size: clamp(1.2rem, 2.8vw, 1.45rem);
+  font-size: clamp(1.6rem, 3vw, 1.55rem);
   font-style: italic;
   color: rgba(244, 237, 228, 0.95);
 }
@@ -194,6 +194,7 @@
   margin: 0 auto 0.9rem;
   max-width: 40rem;
   font-size: 1.05rem;
+  font-weight: 600;
   line-height: 1.55;
   color: rgba(244, 237, 228, 0.92);
 }

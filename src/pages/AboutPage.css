@@ -3,6 +3,10 @@
   padding-bottom: clamp(3.25rem, 9vw, 5rem);
 }
 
+.about-page .hero.hero--photo.about-hero {
+  padding-bottom: clamp(2rem, 5vw, 2.75rem);
+}
+
 /* Photo stays full-strength at the top: no mask fade or top scrim there */
 .hero.hero--photo.about-hero::before,
 .hero.hero--photo.about-hero::after {
@@ -75,6 +79,10 @@
   max-width: 52rem;
   margin: 0 auto;
   color: #0a0a0a;
+}
+
+.about-page .about-page__body {
+  padding-bottom: 0;
 }
 
 .about-page__body p {

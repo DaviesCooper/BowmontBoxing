@@ -59,34 +59,38 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 2.65rem;
-  padding: 0 1.35rem;
-  font-family: var(--font-display);
-  font-size: 1.02rem;
-  letter-spacing: 0.14em;
+  width: 2.65rem;
+  height: 2.65rem;
+  padding: 0;
   color: var(--ink);
   text-decoration: none;
-  background: var(--gold);
-  border: 1px solid var(--gold-dim);
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(201, 162, 39, 0.4);
   border-radius: 4px;
-  box-shadow: 0 2px 0 var(--gold-dim);
   transition:
-    transform 0.15s ease,
-    box-shadow 0.15s ease,
-    background 0.15s ease;
+    color 0.15s ease,
+    border-color 0.15s ease,
+    background 0.15s ease,
+    transform 0.15s ease;
 }
 
 .site-footer__join:hover {
-  color: var(--ink);
+  color: var(--rust);
   text-decoration: none;
-  background: #d4ad3a;
+  background: rgba(255, 165, 0, 0.12);
+  border-color: var(--gold);
   transform: translateY(-1px);
-  box-shadow: 0 4px 0 var(--gold-dim);
 }
 
 .site-footer__join:focus-visible {
-  outline: 2px solid var(--ink);
+  outline: 2px solid var(--gold);
   outline-offset: 3px;
+}
+
+.site-footer__join-logo {
+  width: 1.6rem;
+  height: 1.6rem;
+  display: block;
 }
 
 .site-footer__meta {

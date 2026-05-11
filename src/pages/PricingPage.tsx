@@ -1,48 +1,61 @@
+import '../components/Hero.css';
+import './AboutPage.css';
 import './PricingPage.css';
 
 const tiers = [
   {
-    name: 'Drop-in',
-    price: '$20',
-    detail: 'Single class or open gym block. First visit includes a quick orientation.',
+    name: 'Monthly — adults',
+    price: '$90/month',
+    detail: 'Ages 17 and older. Group training.',
   },
   {
-    name: 'Monthly unlimited',
-    price: '$95',
-    detail: 'All scheduled classes plus open gym during lobby hours. Autopay optional.',
+    name: 'Monthly — youth',
+    price: '$60/month',
+    detail: 'Ages 16 and under. Group training.',
   },
   {
-    name: '10-class card',
-    price: '$160',
-    detail: 'Punch card, no expiry stress—good for folks on shift work.',
+    name: '10-class punch — adults',
+    price: '$120',
+    detail: 'Ten classes. Ages 17 and older.',
   },
   {
-    name: 'Youth (under 16)',
-    price: '$65 / mo',
-    detail: 'Fundamentals and family hour included. Mouthguard required for any contact.',
+    name: '10-class punch — youth',
+    price: '$100',
+    detail: 'Ten classes. Ages 16 and under.',
   },
-];
+] as const;
 
 export function PricingPage() {
   return (
-    <section className="section" aria-labelledby="pricing-heading">
-      <h1 id="pricing-heading" className="section__heading">
-        Rates
-      </h1>
-      <p className="section__lead">
-        Numbers below are placeholders—swap in your real fees, family discounts, and
-        any tournament or locker fees. HST or sales tax may apply depending on your
-        province or state.
-      </p>
-      <div className="pricing-grid">
-        {tiers.map((t) => (
-          <article key={t.name} className="pricing-card">
-            <h3 className="pricing-card__title">{t.name}</h3>
-            <p className="pricing-card__price">{t.price}</p>
-            <p className="pricing-card__detail">{t.detail}</p>
-          </article>
-        ))}
+    <div className="pricing-page">
+      <section
+        className="hero hero--photo about-hero"
+        aria-labelledby="pricing-heading"
+      >
+        <h1 id="pricing-heading" className="hero__title hero__title--text">
+          Pricing
+        </h1>
+        <p className="hero__intro about-hero__tagline">
+          Fees below.
+        </p>
+      </section>
+
+      <div className="about-page__body pricing-page__body">
+        <p>
+          All of our coaches are volunteers and do not offer private training.
+        </p>
+
+        <p>Prices for our group training are listed below.</p>
+        <div className="pricing-grid">
+          {tiers.map((t) => (
+            <article key={t.name} className="pricing-card">
+              <h3 className="pricing-card__title">{t.name}</h3>
+              <p className="pricing-card__price">{t.price}</p>
+              <p className="pricing-card__detail">{t.detail}</p>
+            </article>
+          ))}
+        </div>
       </div>
-    </section>
+    </div>
   );
 }
